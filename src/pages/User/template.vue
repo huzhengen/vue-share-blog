@@ -1,6 +1,6 @@
 <template>
-  <div id="login">
-    <h1>登录</h1>
+  <div id="user">
+    <h1>用户</h1>
   </div>
 </template>
 

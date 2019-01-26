@@ -1,6 +1,6 @@
 <template>
-  <div id="login">
-    <h1>登录</h1>
+  <div id="create">
+    <h1>创建博客</h1>
   </div>
 </template>
 
