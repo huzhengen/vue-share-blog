@@ -6,15 +6,9 @@
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import Login from "./pages/Login/template.vue";
 
 export default {
   name: "app",
-  components: {
-    HelloWorld,
-    Login
-  }
 };
 </script>
 
