@@ -11,17 +11,25 @@
     <template v-if="isLogin">
       <h1>一起共享博客吧</h1>
       <i class="edit el-icon-edit"></i>
-      <img class="avatar" src="http://cn.gravatar.com/avatar/1?s=128&d=identicon" alt>
+      <img class="avatar" :src="user.avatar" :alt="user.username" :title="user.username">
     </template>
   </header>
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
-    return {
-      isLogin: false
-    };
+    return {};
+  },
+  computed: {
+    ...mapGetters(["isLogin", "user"])
+  },
+  created() {
+    this.checkLogin();
+  },
+  methods: {
+    ...mapActions(["checkLogin"])
   }
 };
 </script>
