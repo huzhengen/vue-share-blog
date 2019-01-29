@@ -1,11 +1,21 @@
-import request from '../../helpers/request.js'
-import auth from '../../api/auth.js'
+import request from '@/helpers/request.js'
+import blog from '@/api/blog.js'
 
-window.request = request
-window.auth = auth
+
+
 
 export default {
-    props: {
-        msg: String
+    data(){
+        return {
+            blogs:[]
+        }
+    },
+    created(){
+        blog.getIndexBlogs().then(res=>{
+            this.blogs = res.data
+        })
+    },
+    methods:{
+
     }
 };
