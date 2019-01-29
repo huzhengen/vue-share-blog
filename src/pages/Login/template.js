@@ -12,7 +12,8 @@ export default {
         ...mapActions(['login']),
         onLogin() {
             this.login({ username: this.username, password: this.password }).then(() => {
-                this.$router.push({ path: '/' })
+                console.log(this.$route)
+                this.$router.push({ path: this.$route.query.redirect || '/' })
             })
         },
     }
