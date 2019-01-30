@@ -1,5 +1,5 @@
 <template>
-  <div id="user">
+  <div id="user" v-if="blogs.length">
     <section class="user-info">
       <img :src="user.avatar" :alt="user.username" :title="user.username" class="avatar">
       <h3>{{user.username}}</h3>

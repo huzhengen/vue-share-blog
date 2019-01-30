@@ -18,7 +18,6 @@ export default {
     },
     methods: {
         onPageChange(newPage) {
-            console.log(newPage)
             blog.getIndexBlogs({ page: newPage }).then(res => {
                 this.blogs = res.data
                 this.total = res.total
