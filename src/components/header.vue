@@ -94,7 +94,7 @@ header.login {
     margin: 0;
     padding: 0;
     color: #fff;
-    font-size: 40px;
+    font-size: 30px;
     text-transform: uppercase;
     flex: 1;
     a{

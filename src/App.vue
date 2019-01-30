@@ -34,8 +34,9 @@ export default {
 
   #header {
     grid-area: header;
-    padding-left: 12%;
-    padding-right: 12%;
+    // padding-left: 12%;
+    // padding-right: 12%;
+    padding: 10px 12%;
   }
 
   #main {
