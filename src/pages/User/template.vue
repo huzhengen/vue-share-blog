@@ -5,17 +5,19 @@
       <h3>{{user.username}}</h3>
     </section>
     <section>
-      <router-link class="item" :to="`/detail/${blog.id}`" v-for="blog in blogs" :key="blog.id">
+      <div class="item" v-for="blog in blogs" :key="blog.id">
         <div class="date">
           <span class="day">{{splitDate(blog.createdAt).date}}</span>
           <span class="month">{{splitDate(blog.createdAt).month}}月</span>
           <span class="year">{{splitDate(blog.createdAt).year}}</span>
         </div>
-        <h3>{{blog.title}}</h3>
+        <h3>
+          <router-link :to="`/detail/${blog.id}`">{{blog.title}}</router-link>
+        </h3>
         <p>{{blog.description}}</p>
-      </router-link>
+      </div>
     </section>
-    <section class="pagination">
+    <section class="pagination" v-if="blogs.length">
       <el-pagination
         :current-page="page"
         layout="prev,pager,next"

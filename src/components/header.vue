@@ -2,7 +2,6 @@
   <header :class="{login: isLogin, 'no-login': !isLogin}">
     <template v-if="!isLogin">
       <h1><router-link to="/">一起共享博客吧</router-link></h1>
-      <p>精品博客汇聚</p>
       <div class="btns">
         <router-link to="/login">
           <el-button>立即登录</el-button>
@@ -64,7 +63,7 @@ header.no-login {
   h1 {
     color: #fff;
     font-size: 40px;
-    margin: 60px 0 0 0;
+    margin: 30px 0 0 0;
     text-transform: uppercase;
     a{
       color: #fff;
@@ -78,6 +77,7 @@ header.no-login {
 
   .btns {
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   button {
