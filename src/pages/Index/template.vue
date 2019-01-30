@@ -8,10 +8,15 @@
         </figure>
         <h3>
           {{blog.title}}
-          <span>{{blog.createAt}}</span>
+          <span>{{blog.createdAt}}</span>
         </h3>
         <p>{{blog.description}}</p>
       </router-link>
+    </section>
+    <section>
+      <el-pagination layout="prev,pager,next" :total="total"
+        @current-change="onPageChange"
+      ></el-pagination>
     </section>
   </div>
 </template>

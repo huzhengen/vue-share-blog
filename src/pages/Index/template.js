@@ -1,21 +1,27 @@
-import request from '@/helpers/request.js'
 import blog from '@/api/blog.js'
 
-
-
-
 export default {
-    data(){
+    data() {
         return {
-            blogs:[]
+            blogs: [],
+            total: 0,
+            page: 1,
         }
     },
-    created(){
-        blog.getIndexBlogs().then(res=>{
+    created() {
+        blog.getIndexBlogs().then(res => {
             this.blogs = res.data
+            this.total = res.total
+            this.page = res.page
         })
     },
-    methods:{
-
+    methods: {
+        onPageChange(newPage) {
+            blog.getIndexBlogs({ page: newPage }).then(res => {
+                this.blogs = res.data
+                this.total = res.total
+                this.page = res.page
+            })
+        },
     }
 };
