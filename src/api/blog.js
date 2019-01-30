@@ -4,8 +4,8 @@ const URL = {
     GET_LIST: '/blog',
     GET_DETAIL: '/blog/:blogId',
     CREATE: '/blog',
-    UPDATE: '/blog/blogId',
-    DELETE: '/blog/blogId'
+    UPDATE: '/blog/:blogId',
+    DELETE: '/blog/:blogId',
 }
 
 export default {
