@@ -8,13 +8,13 @@
             <figcaption>{{blog.user.username}}</figcaption>
           </router-link>
         </figure>
-        <h3>
+        <h3 v-if="blog.user">
           <router-link :to="`/detail/${blog.id}`">
             {{blog.title}}
             <span>{{friendlyDate(blog.createdAt)}}</span>
           </router-link>
         </h3>
-        <p>{{blog.description}}</p>
+        <p v-if="blog.user">{{blog.description}}</p>
       </div>
     </section>
     <section class="pagination">
