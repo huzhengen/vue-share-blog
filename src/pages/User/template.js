@@ -31,7 +31,6 @@ export default {
             }
         },
         onPageChange(newPage) {
-            console.log(newPage)
             blog.getBlogsByUserId(this.userId, { page: newPage }).then(res => {
                 this.blogs = res.data
                 this.page = res.page

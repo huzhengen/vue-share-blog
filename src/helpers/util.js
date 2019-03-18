@@ -22,7 +22,7 @@ function friendlyDate(dateStr) {
     return str
 }
 export default {
-    install(Vue, options) {
+    install(Vue) {
         Vue.prototype.friendlyDate = friendlyDate
     }
 }
